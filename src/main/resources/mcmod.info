@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "survivalimprovement",
+    "name": "SurvivalImprovement",
+    "description": "A Minecraft Forge mod that aims to improve survival mode.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/DeflatedPickle/SurvivalImprovement",
+    "updateUrl": "",
+    "authorList": ["DeflatedPickle"],
+    "credits": "Forge, FML, DeflatedPickle",
+    "logoFile": "logo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
