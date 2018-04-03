@@ -1,5 +1,7 @@
 package com.deflatedpickle.survivalimprovement
 
+import com.deflatedpickle.survivalimprovement.events.ForgeEventHandler
+import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.EventHandler
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
@@ -13,6 +15,7 @@ object SurvivalImprovement {
   @EventHandler
   def init(event: FMLInitializationEvent): Unit = {
     log.info("Starting Init.")
+    MinecraftForge.EVENT_BUS.register(new ForgeEventHandler)
     log.info("Finished Init.")
   }
 }
