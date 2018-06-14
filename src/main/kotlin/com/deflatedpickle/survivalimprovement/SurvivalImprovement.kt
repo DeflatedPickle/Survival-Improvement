@@ -11,16 +11,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
-@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS, modLanguage = "scala")
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS, modLanguageAdapter = Reference.ADAPTER)
 object SurvivalImprovement {
-  val log: Logger = LogManager.getLogger(Reference.NAME)
+  val log: Logger = LogManager.getLogger(Reference.MOD_ID)
 
   @EventHandler
-  def init(event: FMLInitializationEvent): Unit = {
+  fun init(event: FMLInitializationEvent) {
     log.info("Starting Init.")
-    MinecraftForge.EVENT_BUS.register(new ForgeEventHandler)
+    MinecraftForge.EVENT_BUS.register(ForgeEventHandler())
 
-    GameRegistry.addSmelting(Blocks.SAPLING, new ItemStack(Blocks.DEADBUSH), 0)
+    GameRegistry.addSmelting(Blocks.SAPLING, ItemStack(Blocks.DEADBUSH), 0f)
     log.info("Finished Init.")
   }
 }
